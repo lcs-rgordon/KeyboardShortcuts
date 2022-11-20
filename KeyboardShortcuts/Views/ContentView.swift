@@ -13,10 +13,10 @@ struct ContentView: View {
     @State var selectedShortcut: Shortcut?
     
     var body: some View {
-        
+                
         NavigationView {
 
-            List(shortcutsList, selection: $selectedShortcut) { shortcut in
+            List(shortcutsList, id: \.self, selection: $selectedShortcut) { shortcut in
                 
                 NavigationLink(destination: {
                     ShortcutDetailView(item: selectedShortcut)
@@ -28,7 +28,7 @@ struct ContentView: View {
 
         }
         .onChange(of: selectedShortcut) { newSelection in
-            print(newSelection?.description)
+            print(newSelection?.description ?? "Nothing selected")
         }
 
     }
