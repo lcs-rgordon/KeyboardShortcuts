@@ -10,18 +10,8 @@ import SDWebImageSwiftUI
 
 struct ContentView: View {
     
-    @State private var isAnimating = true
-    
     var body: some View {
-        VStack {
-            AnimatedImage(name: "Tabs.gif", isAnimating: $isAnimating)
-                .resizable()
-                .scaledToFit()
-                .onTapGesture {
-                    isAnimating.toggle()
-                }
-        }
-        .padding()
+        Text("Hello world")
     }
 }
 

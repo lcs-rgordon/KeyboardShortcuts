@@ -13,6 +13,8 @@
 		818F6587292A5EF600F8FED8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 818F6586292A5EF600F8FED8 /* Preview Assets.xcassets */; };
 		818F6593292A610A00F8FED8 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 818F6592292A610A00F8FED8 /* SDWebImageSwiftUI */; };
 		818F6596292A617100F8FED8 /* Tabs.gif in Resources */ = {isa = PBXBuildFile; fileRef = 818F6595292A617100F8FED8 /* Tabs.gif */; };
+		818F6599292A630E00F8FED8 /* ShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F6598292A630E00F8FED8 /* ShortcutView.swift */; };
+		818F659C292A637D00F8FED8 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F659B292A637D00F8FED8 /* Shortcut.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		818F6586292A5EF600F8FED8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		818F6588292A5EF600F8FED8 /* KeyboardShortcuts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyboardShortcuts.entitlements; sourceTree = "<group>"; };
 		818F6595292A617100F8FED8 /* Tabs.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Tabs.gif; sourceTree = "<group>"; };
+		818F6598292A630E00F8FED8 /* ShortcutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutView.swift; sourceTree = "<group>"; };
+		818F659B292A637D00F8FED8 /* Shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcut.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,10 @@
 		818F657E292A5EF600F8FED8 /* KeyboardShortcuts */ = {
 			isa = PBXGroup;
 			children = (
-				818F6594292A615300F8FED8 /* Images */,
 				818F657F292A5EF600F8FED8 /* KeyboardShortcutsApp.swift */,
-				818F6581292A5EF600F8FED8 /* ContentView.swift */,
+				818F6594292A615300F8FED8 /* Images */,
+				818F659A292A636C00F8FED8 /* Model */,
+				818F6597292A62C600F8FED8 /* Views */,
 				818F6583292A5EF600F8FED8 /* Assets.xcassets */,
 				818F6588292A5EF600F8FED8 /* KeyboardShortcuts.entitlements */,
 				818F6585292A5EF600F8FED8 /* Preview Content */,
@@ -80,6 +85,23 @@
 				818F6595292A617100F8FED8 /* Tabs.gif */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		818F6597292A62C600F8FED8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				818F6581292A5EF600F8FED8 /* ContentView.swift */,
+				818F6598292A630E00F8FED8 /* ShortcutView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		818F659A292A636C00F8FED8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				818F659B292A637D00F8FED8 /* Shortcut.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +181,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				818F6599292A630E00F8FED8 /* ShortcutView.swift in Sources */,
+				818F659C292A637D00F8FED8 /* Shortcut.swift in Sources */,
 				818F6582292A5EF600F8FED8 /* ContentView.swift in Sources */,
 				818F6580292A5EF600F8FED8 /* KeyboardShortcutsApp.swift in Sources */,
 			);
