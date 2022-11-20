@@ -12,6 +12,7 @@ struct KeyboardShortcutsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .frame(minWidth: 600, idealWidth: 700, minHeight: 500, idealHeight: 600)
         }
     }
 }

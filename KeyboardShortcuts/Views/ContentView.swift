@@ -25,6 +25,8 @@ struct ContentView: View {
                 })
                 
             }
+            .frame(minWidth: 300, idealWidth: 400, maxWidth: 400)
+            
 
         }
         .onChange(of: selectedShortcut) { newSelection in
