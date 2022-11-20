@@ -13,7 +13,7 @@ struct Glyph: Identifiable {
     let image: Image
 }
 
-struct Shortcut: Identifiable {
+struct Shortcut: Identifiable, Hashable {
     
     // MARK: Stored properties
     let id = UUID()

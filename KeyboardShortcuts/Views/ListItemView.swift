@@ -14,7 +14,18 @@ struct ListItemView: View {
     let item: Shortcut
     
     var body: some View {
+        
         VStack {
+            HStack {
+                ForEach(item.symbols) { symbol in
+                    symbol.image
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: frameWidth, height: frameWidth)
+                }
+                
+                Spacer()
+            }
             HStack {
                 Text(item.sequence)
                     .font(.title2)
@@ -27,17 +38,9 @@ struct ListItemView: View {
                 
                 Spacer()
             }
-            HStack {
-                ForEach(item.symbols) { symbol in
-                    symbol.image
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: frameWidth, height: frameWidth)
-                }
-                
-                Spacer()
-            }
         }
+        .padding()
+        
     }
 }
 
