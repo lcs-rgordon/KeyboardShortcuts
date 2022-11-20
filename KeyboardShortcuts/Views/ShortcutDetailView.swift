@@ -39,7 +39,9 @@ struct ShortcutDetailView: View {
                     HStack {
                         Button(action: {
                             // Blindly add the current item to the list of favourites, regardless of whether it's there already or not
-                            favouritesList.append(item)
+                            if !favouritesList.contains(item) {
+                                favouritesList.append(item)
+                            }
                         }, label: {
                             Text("Add to Favourites")
                         })
