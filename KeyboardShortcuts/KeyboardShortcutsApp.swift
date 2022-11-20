@@ -23,6 +23,7 @@ struct KeyboardShortcutsApp: App {
     // MARK: Stored properties
     @State private var favouritesList: [Shortcut] = []
     
+    // Not strictly necessary, but leaving in so that a way to detect app being quit is present
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     // Detect when app moves between the foreground, background, and inactive states
