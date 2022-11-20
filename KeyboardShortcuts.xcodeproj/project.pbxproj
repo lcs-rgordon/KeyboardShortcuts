@@ -25,6 +25,8 @@
 		818F65AF292ACCA300F8FED8 /* Left Square Bracket Dark.pxd in Resources */ = {isa = PBXBuildFile; fileRef = 818F65A9292ACCA300F8FED8 /* Left Square Bracket Dark.pxd */; };
 		818F65B1292AD53200F8FED8 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F65B0292AD53200F8FED8 /* FavouritesView.swift */; };
 		818F65B5292AE19D00F8FED8 /* MainMenuCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F65B4292AE19D00F8FED8 /* MainMenuCommands.swift */; };
+		818F65B8292AE70500F8FED8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F65B7292AE70500F8FED8 /* Constants.swift */; };
+		818F65BA292AE71D00F8FED8 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F65B9292AE71D00F8FED8 /* Functions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		818F65B0292AD53200F8FED8 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
 		818F65B2292AD8D200F8FED8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		818F65B4292AE19D00F8FED8 /* MainMenuCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCommands.swift; sourceTree = "<group>"; };
+		818F65B7292AE70500F8FED8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		818F65B9292AE71D00F8FED8 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 				818F6594292A615300F8FED8 /* Images */,
 				818F659A292A636C00F8FED8 /* Model */,
 				818F65A3292ACCA300F8FED8 /* Originals */,
+				818F65B6292AE6E400F8FED8 /* Shared */,
 				818F6597292A62C600F8FED8 /* Views */,
 				818F6583292A5EF600F8FED8 /* Assets.xcassets */,
 				818F6588292A5EF600F8FED8 /* KeyboardShortcuts.entitlements */,
@@ -151,6 +156,15 @@
 				818F65B4292AE19D00F8FED8 /* MainMenuCommands.swift */,
 			);
 			path = Commands;
+			sourceTree = "<group>";
+		};
+		818F65B6292AE6E400F8FED8 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				818F65B7292AE70500F8FED8 /* Constants.swift */,
+				818F65B9292AE71D00F8FED8 /* Functions.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,11 +253,13 @@
 				818F659E292A712900F8FED8 /* ListItemView.swift in Sources */,
 				818F6599292A630E00F8FED8 /* ShortcutAnimationView.swift in Sources */,
 				818F65A2292A8D5E00F8FED8 /* ShortcutDetailView.swift in Sources */,
+				818F65BA292AE71D00F8FED8 /* Functions.swift in Sources */,
 				818F659C292A637D00F8FED8 /* Shortcut.swift in Sources */,
 				818F6582292A5EF600F8FED8 /* ContentView.swift in Sources */,
 				818F65B5292AE19D00F8FED8 /* MainMenuCommands.swift in Sources */,
 				818F65B1292AD53200F8FED8 /* FavouritesView.swift in Sources */,
 				818F6580292A5EF600F8FED8 /* KeyboardShortcutsApp.swift in Sources */,
+				818F65B8292AE70500F8FED8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

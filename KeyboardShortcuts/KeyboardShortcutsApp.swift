@@ -7,18 +7,28 @@
 
 import SwiftUI
 
+class AppDelegate: NSObject, NSApplicationDelegate {
+
+    func applicationWillTerminate(_ notification: Notification) {
+        
+        print("App is closing...")
+        
+    }
+    
+}
+
 @main
 struct KeyboardShortcutsApp: App {
     
+    // MARK: Stored properties
     @State private var favouritesList: [Shortcut] = []
+    
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     // Detect when app moves between the foreground, background, and inactive states
     @Environment(\.scenePhase) var scenePhase
-    
-    init() {
-        NSWindow.allowsAutomaticWindowTabbing = false
-    }
-    
+
+    // MARK: Computed properties
     var body: some Scene {
         WindowGroup {
             ContentView(favouritesList: $favouritesList)
@@ -48,7 +58,7 @@ struct KeyboardShortcutsApp: App {
         .commands {
             MainMenuCommands()
         }
-
+        
         
         WindowGroup("Favourites") {
             FavouritesView(favouritesList: $favouritesList)
@@ -59,6 +69,12 @@ struct KeyboardShortcutsApp: App {
         // https://developer.apple.com/forums/thread/651592?answerId=680951022#680951022
         
     }
+    
+    // MARK: Initializers
+    init() {
+        NSWindow.allowsAutomaticWindowTabbing = false
+    }
+    
 }
 
 enum OpenWindows: String, CaseIterable {
