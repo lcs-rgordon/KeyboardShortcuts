@@ -16,7 +16,6 @@
 		818F6599292A630E00F8FED8 /* ShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F6598292A630E00F8FED8 /* ShortcutView.swift */; };
 		818F659C292A637D00F8FED8 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F659B292A637D00F8FED8 /* Shortcut.swift */; };
 		818F659E292A712900F8FED8 /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F659D292A712900F8FED8 /* ListItemView.swift */; };
-		818F65A0292A8CD400F8FED8 /* ShortcutsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F659F292A8CD400F8FED8 /* ShortcutsListView.swift */; };
 		818F65A2292A8D5E00F8FED8 /* ShortcutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F65A1292A8D5E00F8FED8 /* ShortcutDetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +30,6 @@
 		818F6598292A630E00F8FED8 /* ShortcutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutView.swift; sourceTree = "<group>"; };
 		818F659B292A637D00F8FED8 /* Shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcut.swift; sourceTree = "<group>"; };
 		818F659D292A712900F8FED8 /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
-		818F659F292A8CD400F8FED8 /* ShortcutsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsListView.swift; sourceTree = "<group>"; };
 		818F65A1292A8D5E00F8FED8 /* ShortcutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,7 +97,6 @@
 				818F6581292A5EF600F8FED8 /* ContentView.swift */,
 				818F6598292A630E00F8FED8 /* ShortcutView.swift */,
 				818F659D292A712900F8FED8 /* ListItemView.swift */,
-				818F659F292A8CD400F8FED8 /* ShortcutsListView.swift */,
 				818F65A1292A8D5E00F8FED8 /* ShortcutDetailView.swift */,
 			);
 			path = Views;
@@ -195,7 +192,6 @@
 				818F65A2292A8D5E00F8FED8 /* ShortcutDetailView.swift in Sources */,
 				818F659C292A637D00F8FED8 /* Shortcut.swift in Sources */,
 				818F6582292A5EF600F8FED8 /* ContentView.swift in Sources */,
-				818F65A0292A8CD400F8FED8 /* ShortcutsListView.swift in Sources */,
 				818F6580292A5EF600F8FED8 /* KeyboardShortcutsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

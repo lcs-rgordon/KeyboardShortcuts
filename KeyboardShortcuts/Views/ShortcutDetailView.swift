@@ -14,7 +14,15 @@ struct ShortcutDetailView: View {
     var body: some View {
         
         if let item = item {
-            ListItemView(item: item)
+            
+            VStack {
+                ListItemView(item: item)
+                    .padding(.top)
+                
+                Spacer()
+            }
+            
+            
         } else {
             Text("Please select a shortcut.")
                 .font(.largeTitle)
