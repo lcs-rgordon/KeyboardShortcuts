@@ -28,8 +28,8 @@ struct ListItemView: View {
                 Spacer()
             }
             HStack {
-                ForEach(item.symbols, id: \.self) { symbol in
-                    Image(systemName: symbol)
+                ForEach(item.symbols) { symbol in
+                    symbol.image
                         .resizable()
                         .scaledToFit()
                         .frame(width: frameWidth, height: frameWidth)
