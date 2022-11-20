@@ -19,6 +19,7 @@ struct Shortcut: Identifiable, Hashable {
     let id = UUID()
     let sequence: String
     let description: String
+    let animation: String = "Tabs.gif"
     
     // MARK: Computed properties
     

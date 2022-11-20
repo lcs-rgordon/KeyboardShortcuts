@@ -13,7 +13,7 @@
 		818F6587292A5EF600F8FED8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 818F6586292A5EF600F8FED8 /* Preview Assets.xcassets */; };
 		818F6593292A610A00F8FED8 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 818F6592292A610A00F8FED8 /* SDWebImageSwiftUI */; };
 		818F6596292A617100F8FED8 /* Tabs.gif in Resources */ = {isa = PBXBuildFile; fileRef = 818F6595292A617100F8FED8 /* Tabs.gif */; };
-		818F6599292A630E00F8FED8 /* ShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F6598292A630E00F8FED8 /* ShortcutView.swift */; };
+		818F6599292A630E00F8FED8 /* ShortcutAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F6598292A630E00F8FED8 /* ShortcutAnimationView.swift */; };
 		818F659C292A637D00F8FED8 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F659B292A637D00F8FED8 /* Shortcut.swift */; };
 		818F659E292A712900F8FED8 /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F659D292A712900F8FED8 /* ListItemView.swift */; };
 		818F65A2292A8D5E00F8FED8 /* ShortcutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F65A1292A8D5E00F8FED8 /* ShortcutDetailView.swift */; };
@@ -27,7 +27,7 @@
 		818F6586292A5EF600F8FED8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		818F6588292A5EF600F8FED8 /* KeyboardShortcuts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyboardShortcuts.entitlements; sourceTree = "<group>"; };
 		818F6595292A617100F8FED8 /* Tabs.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Tabs.gif; sourceTree = "<group>"; };
-		818F6598292A630E00F8FED8 /* ShortcutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutView.swift; sourceTree = "<group>"; };
+		818F6598292A630E00F8FED8 /* ShortcutAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutAnimationView.swift; sourceTree = "<group>"; };
 		818F659B292A637D00F8FED8 /* Shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcut.swift; sourceTree = "<group>"; };
 		818F659D292A712900F8FED8 /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 		818F65A1292A8D5E00F8FED8 /* ShortcutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutDetailView.swift; sourceTree = "<group>"; };
@@ -95,8 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				818F6581292A5EF600F8FED8 /* ContentView.swift */,
-				818F6598292A630E00F8FED8 /* ShortcutView.swift */,
 				818F659D292A712900F8FED8 /* ListItemView.swift */,
+				818F6598292A630E00F8FED8 /* ShortcutAnimationView.swift */,
 				818F65A1292A8D5E00F8FED8 /* ShortcutDetailView.swift */,
 			);
 			path = Views;
@@ -188,7 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				818F659E292A712900F8FED8 /* ListItemView.swift in Sources */,
-				818F6599292A630E00F8FED8 /* ShortcutView.swift in Sources */,
+				818F6599292A630E00F8FED8 /* ShortcutAnimationView.swift in Sources */,
 				818F65A2292A8D5E00F8FED8 /* ShortcutDetailView.swift in Sources */,
 				818F659C292A637D00F8FED8 /* Shortcut.swift in Sources */,
 				818F6582292A5EF600F8FED8 /* ContentView.swift in Sources */,

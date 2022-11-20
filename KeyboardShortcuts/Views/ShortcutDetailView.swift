@@ -20,6 +20,8 @@ struct ShortcutDetailView: View {
                     .padding(.top)
                 
                 Spacer()
+                
+                ShortcutAnimationView(animation: item.animation)
             }
             
             

@@ -8,13 +8,14 @@
 import SwiftUI
 import SDWebImageSwiftUI
 
-struct ShortcutView: View {
+struct ShortcutAnimationView: View {
     
-    @State private var isAnimating = false
+    @State private var isAnimating = true
+    let animation: String
     
     var body: some View {
         VStack {
-            AnimatedImage(name: "Tabs.gif", isAnimating: $isAnimating)
+            AnimatedImage(name: animation, isAnimating: $isAnimating)
                 .resizable()
                 .scaledToFit()
                 .onTapGesture {
@@ -25,8 +26,8 @@ struct ShortcutView: View {
     }
 }
 
-struct ShortcutView_Previews: PreviewProvider {
+struct ShortcutAnimationView_Previews: PreviewProvider {
     static var previews: some View {
-        ShortcutView()
+        ShortcutAnimationView(animation: "Tabs.gif")
     }
 }
