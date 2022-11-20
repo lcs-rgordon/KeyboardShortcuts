@@ -55,8 +55,54 @@ struct ContentView: View {
         .onChange(of: selectedShortcut) { newSelection in
             print(newSelection?.description ?? "Nothing selected")
         }
+        .task {
+            // Runs once when app opens
+            loadDataFromStorage()
+        }
+
 
     }
+    
+    // MARK: Functions
+    func loadDataFromStorage () {
+        
+        // Get a URL that points to the saved JSON data containing the list of flavours
+        let filename = getDocumentsDirectory().appendingPathComponent(fileNameLabel)
+                
+        // Attempt to load from the stored / persisted file which is in JSON format
+        do {
+            
+            // Load the raw data
+            let data = try Data(contentsOf: filename)
+            
+            // What was loaded from the file?
+            print("Got data from persisted file, contents are:")
+            print(String(data: data, encoding: .utf8)!)
+
+            // Decode the data into Swift native data structures
+            let favouritesLoadedFromDisk = try JSONDecoder().decode([Shortcut].self, from: data)
+            
+            // What has been loaded into memory?
+            print("Data from persisted file now in a list in memory, contents are:")
+            print(dump(favouritesLoadedFromDisk))
+            
+            // Now assign to the source of truth
+            favouritesList = favouritesLoadedFromDisk
+            
+        } catch {
+            
+            // What went wrong?
+            print(error.localizedDescription)
+            print("Could not load data from persisted file, favourites list will remain empty.")
+            
+            print("Contents of favourites list in memory are:")
+            print(dump(favouritesList))
+
+        }
+        
+    }
+    
+
 }
 
 struct ContentView_Previews: PreviewProvider {

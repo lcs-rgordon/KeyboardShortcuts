@@ -35,31 +35,10 @@ struct KeyboardShortcutsApp: App {
             ContentView(favouritesList: $favouritesList)
                 .frame(minWidth: 600, idealWidth: 700, minHeight: 500, idealHeight: 700)
         }
-        // Runs when app phase changes
-        .onChange(of: scenePhase) { newPhase in
-            if newPhase == .inactive {
-                
-                print("Inactive")
-                
-            } else if newPhase == .active {
-                
-                print("Active")
-                
-            } else if newPhase == .background {
-                
-                print("Background")
-                
-                // Permanently save the list of favourite shortcuts
-                
-                //                persistFlavours()
-                
-            }
-        }
         // Builds menus
         .commands {
             MainMenuCommands()
         }
-        
         
         WindowGroup("Favourites") {
             FavouritesView(favouritesList: $favouritesList)
