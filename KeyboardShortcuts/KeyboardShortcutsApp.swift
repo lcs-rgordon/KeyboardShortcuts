@@ -22,6 +22,8 @@ struct KeyboardShortcutsApp: App {
             FavouritesView(favouritesList: $favouritesList)
                 .frame(minWidth: 600, idealWidth: 700, minHeight: 500, idealHeight: 700)
         }
+        // For opening another window, see this post:
+        // https://developer.apple.com/forums/thread/651592?answerId=680951022#680951022
         .handlesExternalEvents(matching: Set(arrayLiteral: "Favourites"))
         
     }
