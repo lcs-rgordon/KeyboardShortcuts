@@ -35,6 +35,7 @@ struct ListItemView: View {
             HStack {
                 Text(item.description)
                     .font(.body)
+                    .lineLimit(nil)     // Ensure text does not wrap even when searching.
                 
                 Spacer()
             }

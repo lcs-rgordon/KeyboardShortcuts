@@ -218,7 +218,7 @@ let shortcutsList = [
     
     ,
     
-    Shortcut(sequence: "Command-R", description: "(1) When an alias is selected in the Finder: show the original file for the selected alias. (2) In some apps, such as Calendar or Safari, refresh or reload the page. (3) In Software Update, check for software updates again.")
+    Shortcut(sequence: "Command-R", description: "When an alias is selected: show the original file for the selected alias.")
     
     ,
     

@@ -22,6 +22,8 @@ struct ShortcutDetailView: View {
                 Spacer()
                 
                 ShortcutAnimationView(animation: item.animation)
+                
+                Spacer()
             }
             
             

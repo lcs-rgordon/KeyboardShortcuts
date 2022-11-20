@@ -12,11 +12,27 @@ struct ContentView: View {
     
     @State var selectedShortcut: Shortcut?
     
+    // What the user is searching for
+    @State private var searchText = ""
+    
+    // The filtered list of results
+    var searchResults: [Shortcut] {
+        if searchText.isEmpty {
+            return shortcutsList
+        } else {
+            return shortcutsList.filter { currentShortcut in
+                let whetherToIncludeThisShortcut = currentShortcut.description.lowercased().contains(searchText.lowercased()) || currentShortcut.sequence.lowercased().contains(searchText.lowercased())
+                
+                return whetherToIncludeThisShortcut
+            }
+        }
+    }
+    
     var body: some View {
                 
         NavigationView {
 
-            List(shortcutsList, id: \.self, selection: $selectedShortcut) { shortcut in
+            List(searchResults, id: \.self, selection: $selectedShortcut) { shortcut in
                 
                 NavigationLink(destination: {
                     ShortcutDetailView(item: selectedShortcut)
@@ -25,8 +41,10 @@ struct ContentView: View {
                 })
                 
             }
-            .frame(minWidth: 300, idealWidth: 400, maxWidth: 400)
-            
+            .background(Color.primary.colorInvert())
+//            .frame(minWidth: 300, idealWidth: 400, maxWidth: 500, idealHeight: 600)
+            .searchable(text: $searchText)
+
 
         }
         .onChange(of: selectedShortcut) { newSelection in
