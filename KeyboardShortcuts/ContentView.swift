@@ -6,14 +6,20 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ContentView: View {
+    
+    @State private var isAnimating = true
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            AnimatedImage(name: "Tabs.gif", isAnimating: $isAnimating)
+                .resizable()
+                .scaledToFit()
+                .onTapGesture {
+                    isAnimating.toggle()
+                }
         }
         .padding()
     }

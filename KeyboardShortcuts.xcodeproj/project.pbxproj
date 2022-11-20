@@ -11,6 +11,8 @@
 		818F6582292A5EF600F8FED8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F6581292A5EF600F8FED8 /* ContentView.swift */; };
 		818F6584292A5EF600F8FED8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 818F6583292A5EF600F8FED8 /* Assets.xcassets */; };
 		818F6587292A5EF600F8FED8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 818F6586292A5EF600F8FED8 /* Preview Assets.xcassets */; };
+		818F6593292A610A00F8FED8 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 818F6592292A610A00F8FED8 /* SDWebImageSwiftUI */; };
+		818F6596292A617100F8FED8 /* Tabs.gif in Resources */ = {isa = PBXBuildFile; fileRef = 818F6595292A617100F8FED8 /* Tabs.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,7 @@
 		818F6583292A5EF600F8FED8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		818F6586292A5EF600F8FED8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		818F6588292A5EF600F8FED8 /* KeyboardShortcuts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyboardShortcuts.entitlements; sourceTree = "<group>"; };
+		818F6595292A617100F8FED8 /* Tabs.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Tabs.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				818F6593292A610A00F8FED8 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +56,7 @@
 		818F657E292A5EF600F8FED8 /* KeyboardShortcuts */ = {
 			isa = PBXGroup;
 			children = (
+				818F6594292A615300F8FED8 /* Images */,
 				818F657F292A5EF600F8FED8 /* KeyboardShortcutsApp.swift */,
 				818F6581292A5EF600F8FED8 /* ContentView.swift */,
 				818F6583292A5EF600F8FED8 /* Assets.xcassets */,
@@ -67,6 +72,14 @@
 				818F6586292A5EF600F8FED8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		818F6594292A615300F8FED8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				818F6595292A617100F8FED8 /* Tabs.gif */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +98,9 @@
 			dependencies = (
 			);
 			name = KeyboardShortcuts;
+			packageProductDependencies = (
+				818F6592292A610A00F8FED8 /* SDWebImageSwiftUI */,
+			);
 			productName = KeyboardShortcuts;
 			productReference = 818F657C292A5EF600F8FED8 /* KeyboardShortcuts.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +129,9 @@
 				Base,
 			);
 			mainGroup = 818F6573292A5EF600F8FED8;
+			packageReferences = (
+				818F6591292A610A00F8FED8 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 818F657D292A5EF600F8FED8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +148,7 @@
 			files = (
 				818F6587292A5EF600F8FED8 /* Preview Assets.xcassets in Resources */,
 				818F6584292A5EF600F8FED8 /* Assets.xcassets in Resources */,
+				818F6596292A617100F8FED8 /* Tabs.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		818F6591292A610A00F8FED8 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		818F6592292A610A00F8FED8 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 818F6591292A610A00F8FED8 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 818F6574292A5EF600F8FED8 /* Project object */;
 }
