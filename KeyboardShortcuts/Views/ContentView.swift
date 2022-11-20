@@ -11,7 +11,9 @@ import SDWebImageSwiftUI
 struct ContentView: View {
     
     var body: some View {
-        Text("Hello world")
+        List(shortcutsList) { shortcut in
+            ListItemView(item: shortcut)
+        }
     }
 }
 

@@ -7,13 +7,191 @@
 
 import Foundation
 
-struct Shortcut {
+struct Shortcut: Identifiable {
     
     // MARK: Stored properties
+    let id = UUID()
     let sequence: String
     let description: String
     
+    // MARK: Computed properties
+
+    // A list of strings that return matching SF Symbol names for each part of the keyboard shortcut
+    var symbols: [String] {
+        
+        // Get the command sub-parts
+        let shortcutParts = sequence.components(separatedBy: CharacterSet(charactersIn: "–-"))
+        
+        // Start a list of matching symbols
+        var symbolNames: [String] = []
+        for part in shortcutParts {
+            symbolNames.append(symbolsLookup[part] ?? "")
+        }
+        
+        // Break up the sequence using - as a delimiter
+        return symbolNames
+        
+    }
+    
 }
+
+let symbolsLookup: [String: String] = [
+
+    "1" : "1.square"
+    ,
+
+    "2" : "2.square"
+    ,
+
+    "3" : "3.square"
+    ,
+
+    "4" : "4.square"
+    ,
+
+    "A" : "a.square"
+    ,
+
+    "Brightness Down" : "sun.min"
+    ,
+
+    "Brightness Up" : "sun.max"
+    ,
+
+    "C" : "c.square"
+    ,
+
+    "click a disclosure triangle" : "chevron.right"
+    ,
+
+    "click a window title" : "macwindow"
+    ,
+
+    "clicking" : "cursorarrow.click.2"
+    ,
+
+    "Command" : "command"
+    ,
+
+    "Command key while double" : "command"
+    ,
+
+    "Command key while dragging to another volume" : "command"
+    ,
+
+    "Command while dragging" : "command"
+    ,
+
+    "Control" : "control"
+    ,
+
+    "D" : "d.square"
+    ,
+
+    "Delete" : "delete.left"
+    ,
+
+    "Down Arrow" : "arrowtriangle.down.square"
+    ,
+
+    "E" : "e.square"
+    ,
+
+    "F" : "f.square"
+    ,
+
+    "G" : "g.square"
+    ,
+
+    "H" : "h.square"
+    ,
+
+    "I" : "i.square"
+    ,
+
+    "J" : "j.square"
+    ,
+
+    "K" : "k.square"
+    ,
+
+    "Keyboard Brightness Down" : "light.min"
+    ,
+
+    "Keyboard Brightness Up" : "light.max"
+    ,
+
+    "L" : "l.square"
+    ,
+
+    "Left Arrow" : "arrowtriangle.backward.square"
+    ,
+
+    "Left Bracket ([)" : ""
+    ,
+
+    "Mission Control" : ""
+    ,
+
+    "N" : "n.square"
+    ,
+
+    "O" : "o.square"
+    ,
+
+    "Option" : "option"
+    ,
+
+    "Option key while double" : "option"
+    ,
+
+    "Option key while dragging" : "option"
+    ,
+
+    "P" : "p.square"
+    ,
+
+    "R" : "r.square"
+    ,
+
+    "Right Arrow" : "arrowtriangle.right.square"
+    ,
+
+    "Right Bracket (])" : ""
+    ,
+
+    "S" : "s.square"
+    ,
+
+    "Shift" : "shift"
+    ,
+
+    "Slash (/)" : "slash.circle"
+    ,
+
+    "T" : "t.square"
+    ,
+
+    "U" : "u.square"
+    ,
+
+    "Up Arrow" : "arrowtriangle.up.square"
+    ,
+
+    "V" : "v.square"
+    ,
+
+    "Volume Down" : "speaker.wave.1"
+    ,
+
+    "Volume Up" : "speaker.wave.3"
+    ,
+
+    "Y" : "y.square"
+    ,
+
+
+]
 
 let shortcutsList = [
 
@@ -221,11 +399,19 @@ let shortcutsList = [
 
     ,
 
-    Shortcut(sequence: "Control–Brightness Up or Control–Brightness Down", description: "Change the brightness of your external display, if supported by your display.")
+    Shortcut(sequence: "Control–Brightness Up", description: "Increase the brightness of your external display, if supported by your display.")
 
     ,
 
-    Shortcut(sequence: "Option–Shift–Brightness Up or Option–Shift–Brightness Down", description: "Adjust the display brightness in smaller steps. Add the Control key to this shortcut to make the adjustment on your external display, if supported by your display.")
+    Shortcut(sequence: "Control–Brightness Down", description: "Decrease the brightness of your external display, if supported by your display.")
+
+    ,
+
+    Shortcut(sequence: "Option–Shift–Brightness Down", description: "Adjust the display brightness down in smaller steps. Add the Control key to this shortcut to make the adjustment on your external display, if supported by your display.")
+
+    ,
+
+    Shortcut(sequence: "Option–Shift–Brightness Up", description: "Adjust the display brightness up in smaller steps. Add the Control key to this shortcut to make the adjustment on your external display, if supported by your display.")
 
     ,
 
@@ -245,7 +431,11 @@ let shortcutsList = [
 
     ,
 
-    Shortcut(sequence: "Option–Shift–Volume Up or Option–Shift–Volume Down", description: "Adjust the sound volume in smaller steps.")
+    Shortcut(sequence: "Option–Shift–Volume Up", description: "Increase the sound volume in smaller steps.")
+
+    ,
+
+    Shortcut(sequence: "Option–Shift–Volume Down", description: "Decrease the sound volume in smaller steps.")
 
     ,
 
@@ -253,7 +443,11 @@ let shortcutsList = [
 
     ,
 
-    Shortcut(sequence: "Option–Shift–Keyboard Brightness Up or Option–Shift–Keyboard Brightness Down", description: "Adjust the keyboard brightness in smaller steps.")
+    Shortcut(sequence: "Option–Shift–Keyboard Brightness Down", description: "Decrease the keyboard brightness in smaller steps.")
+
+    ,
+
+    Shortcut(sequence: "Option–Shift–Keyboard Brightness Up", description: "Increase the keyboard brightness in smaller steps.")
 
     ,
 
