@@ -23,6 +23,7 @@
 		818F65AD292ACCA300F8FED8 /* Mission Control Dark.pxd in Resources */ = {isa = PBXBuildFile; fileRef = 818F65A7292ACCA300F8FED8 /* Mission Control Dark.pxd */; };
 		818F65AE292ACCA300F8FED8 /* Mission Control Light.pxd in Resources */ = {isa = PBXBuildFile; fileRef = 818F65A8292ACCA300F8FED8 /* Mission Control Light.pxd */; };
 		818F65AF292ACCA300F8FED8 /* Left Square Bracket Dark.pxd in Resources */ = {isa = PBXBuildFile; fileRef = 818F65A9292ACCA300F8FED8 /* Left Square Bracket Dark.pxd */; };
+		818F65B1292AD53200F8FED8 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F65B0292AD53200F8FED8 /* FavouritesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		818F65A7292ACCA300F8FED8 /* Mission Control Dark.pxd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mission Control Dark.pxd"; sourceTree = "<group>"; };
 		818F65A8292ACCA300F8FED8 /* Mission Control Light.pxd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mission Control Light.pxd"; sourceTree = "<group>"; };
 		818F65A9292ACCA300F8FED8 /* Left Square Bracket Dark.pxd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Left Square Bracket Dark.pxd"; sourceTree = "<group>"; };
+		818F65B0292AD53200F8FED8 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
+		818F65B2292AD8D200F8FED8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +79,7 @@
 		818F657E292A5EF600F8FED8 /* KeyboardShortcuts */ = {
 			isa = PBXGroup;
 			children = (
+				818F65B2292AD8D200F8FED8 /* Info.plist */,
 				818F657F292A5EF600F8FED8 /* KeyboardShortcutsApp.swift */,
 				818F6594292A615300F8FED8 /* Images */,
 				818F659A292A636C00F8FED8 /* Model */,
@@ -108,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				818F6581292A5EF600F8FED8 /* ContentView.swift */,
+				818F65B0292AD53200F8FED8 /* FavouritesView.swift */,
 				818F659D292A712900F8FED8 /* ListItemView.swift */,
 				818F6598292A630E00F8FED8 /* ShortcutAnimationView.swift */,
 				818F65A1292A8D5E00F8FED8 /* ShortcutDetailView.swift */,
@@ -225,6 +230,7 @@
 				818F65A2292A8D5E00F8FED8 /* ShortcutDetailView.swift in Sources */,
 				818F659C292A637D00F8FED8 /* Shortcut.swift in Sources */,
 				818F6582292A5EF600F8FED8 /* ContentView.swift in Sources */,
+				818F65B1292AD53200F8FED8 /* FavouritesView.swift in Sources */,
 				818F6580292A5EF600F8FED8 /* KeyboardShortcutsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +366,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KeyboardShortcuts/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Keyboard Shortcuts";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -389,6 +397,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KeyboardShortcuts/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Keyboard Shortcuts";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

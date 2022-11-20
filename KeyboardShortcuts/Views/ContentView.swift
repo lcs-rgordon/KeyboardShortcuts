@@ -15,6 +15,9 @@ struct ContentView: View {
     // What the user is searching for
     @State private var searchText = ""
     
+    // The list of favourites
+    @Binding var favouritesList: [Shortcut]
+    
     // The filtered list of results
     var searchResults: [Shortcut] {
         if searchText.isEmpty {
@@ -35,14 +38,16 @@ struct ContentView: View {
             List(searchResults, id: \.self, selection: $selectedShortcut) { shortcut in
                 
                 NavigationLink(destination: {
-                    ShortcutDetailView(item: selectedShortcut)
+                    ShortcutDetailView(item: selectedShortcut,
+                                       favouritesList: $favouritesList,
+                                       onFavouritesView: false)
                 }, label: {
                     ListItemView(item: shortcut)
                 })
                 
             }
             .background(Color.primary.colorInvert())
-//            .frame(minWidth: 300, idealWidth: 400, maxWidth: 500, idealHeight: 600)
+            .frame(minWidth: 300, idealWidth: 400, maxWidth: 500)
             .searchable(text: $searchText)
 
 
@@ -56,6 +61,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(favouritesList: .constant([]))
     }
 }
