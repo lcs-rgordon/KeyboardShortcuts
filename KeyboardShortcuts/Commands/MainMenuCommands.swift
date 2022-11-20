@@ -24,9 +24,8 @@ struct MainMenuCommands: Commands {
         }
         
         // MARK: File menu
-        CommandGroup(replacing: .newItem) {
-            EmptyView()
-        }
+        
+
         
         // MARK: Edit menu
 
