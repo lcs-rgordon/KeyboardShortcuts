@@ -17,6 +17,12 @@
 		818F659C292A637D00F8FED8 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F659B292A637D00F8FED8 /* Shortcut.swift */; };
 		818F659E292A712900F8FED8 /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F659D292A712900F8FED8 /* ListItemView.swift */; };
 		818F65A2292A8D5E00F8FED8 /* ShortcutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F65A1292A8D5E00F8FED8 /* ShortcutDetailView.swift */; };
+		818F65AA292ACCA300F8FED8 /* Right Square Bracket Dark.pxd in Resources */ = {isa = PBXBuildFile; fileRef = 818F65A4292ACCA300F8FED8 /* Right Square Bracket Dark.pxd */; };
+		818F65AB292ACCA300F8FED8 /* Right Square Bracket Light.pxd in Resources */ = {isa = PBXBuildFile; fileRef = 818F65A5292ACCA300F8FED8 /* Right Square Bracket Light.pxd */; };
+		818F65AC292ACCA300F8FED8 /* Left Square Bracket Light.pxd in Resources */ = {isa = PBXBuildFile; fileRef = 818F65A6292ACCA300F8FED8 /* Left Square Bracket Light.pxd */; };
+		818F65AD292ACCA300F8FED8 /* Mission Control Dark.pxd in Resources */ = {isa = PBXBuildFile; fileRef = 818F65A7292ACCA300F8FED8 /* Mission Control Dark.pxd */; };
+		818F65AE292ACCA300F8FED8 /* Mission Control Light.pxd in Resources */ = {isa = PBXBuildFile; fileRef = 818F65A8292ACCA300F8FED8 /* Mission Control Light.pxd */; };
+		818F65AF292ACCA300F8FED8 /* Left Square Bracket Dark.pxd in Resources */ = {isa = PBXBuildFile; fileRef = 818F65A9292ACCA300F8FED8 /* Left Square Bracket Dark.pxd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +37,12 @@
 		818F659B292A637D00F8FED8 /* Shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcut.swift; sourceTree = "<group>"; };
 		818F659D292A712900F8FED8 /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 		818F65A1292A8D5E00F8FED8 /* ShortcutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutDetailView.swift; sourceTree = "<group>"; };
+		818F65A4292ACCA300F8FED8 /* Right Square Bracket Dark.pxd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Right Square Bracket Dark.pxd"; sourceTree = "<group>"; };
+		818F65A5292ACCA300F8FED8 /* Right Square Bracket Light.pxd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Right Square Bracket Light.pxd"; sourceTree = "<group>"; };
+		818F65A6292ACCA300F8FED8 /* Left Square Bracket Light.pxd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Left Square Bracket Light.pxd"; sourceTree = "<group>"; };
+		818F65A7292ACCA300F8FED8 /* Mission Control Dark.pxd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mission Control Dark.pxd"; sourceTree = "<group>"; };
+		818F65A8292ACCA300F8FED8 /* Mission Control Light.pxd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mission Control Light.pxd"; sourceTree = "<group>"; };
+		818F65A9292ACCA300F8FED8 /* Left Square Bracket Dark.pxd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Left Square Bracket Dark.pxd"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +79,7 @@
 				818F657F292A5EF600F8FED8 /* KeyboardShortcutsApp.swift */,
 				818F6594292A615300F8FED8 /* Images */,
 				818F659A292A636C00F8FED8 /* Model */,
+				818F65A3292ACCA300F8FED8 /* Originals */,
 				818F6597292A62C600F8FED8 /* Views */,
 				818F6583292A5EF600F8FED8 /* Assets.xcassets */,
 				818F6588292A5EF600F8FED8 /* KeyboardShortcuts.entitlements */,
@@ -109,6 +122,20 @@
 			);
 			path = Model;
 			sourceTree = "<group>";
+		};
+		818F65A3292ACCA300F8FED8 /* Originals */ = {
+			isa = PBXGroup;
+			children = (
+				818F65A4292ACCA300F8FED8 /* Right Square Bracket Dark.pxd */,
+				818F65A5292ACCA300F8FED8 /* Right Square Bracket Light.pxd */,
+				818F65A6292ACCA300F8FED8 /* Left Square Bracket Light.pxd */,
+				818F65A7292ACCA300F8FED8 /* Mission Control Dark.pxd */,
+				818F65A8292ACCA300F8FED8 /* Mission Control Light.pxd */,
+				818F65A9292ACCA300F8FED8 /* Left Square Bracket Dark.pxd */,
+			);
+			name = Originals;
+			path = KeyboardShortcuts/Originals;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -174,8 +201,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				818F65AB292ACCA300F8FED8 /* Right Square Bracket Light.pxd in Resources */,
+				818F65AF292ACCA300F8FED8 /* Left Square Bracket Dark.pxd in Resources */,
+				818F65AC292ACCA300F8FED8 /* Left Square Bracket Light.pxd in Resources */,
+				818F65AA292ACCA300F8FED8 /* Right Square Bracket Dark.pxd in Resources */,
 				818F6587292A5EF600F8FED8 /* Preview Assets.xcassets in Resources */,
+				818F65AD292ACCA300F8FED8 /* Mission Control Dark.pxd in Resources */,
 				818F6584292A5EF600F8FED8 /* Assets.xcassets in Resources */,
+				818F65AE292ACCA300F8FED8 /* Mission Control Light.pxd in Resources */,
 				818F6596292A617100F8FED8 /* Tabs.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
