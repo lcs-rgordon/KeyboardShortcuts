@@ -12,19 +12,51 @@ struct KeyboardShortcutsApp: App {
     
     @State private var favouritesList: [Shortcut] = []
     
+    // Detect when app moves between the foreground, background, and inactive states
+    @Environment(\.scenePhase) var scenePhase
+    
+    init() {
+        NSWindow.allowsAutomaticWindowTabbing = false
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView(favouritesList: $favouritesList)
                 .frame(minWidth: 600, idealWidth: 700, minHeight: 500, idealHeight: 700)
         }
+        // Runs when app phase changes
+        .onChange(of: scenePhase) { newPhase in
+            if newPhase == .inactive {
+                
+                print("Inactive")
+                
+            } else if newPhase == .active {
+                
+                print("Active")
+                
+            } else if newPhase == .background {
+                
+                print("Background")
+                
+                // Permanently save the list of favourite shortcuts
+                
+                //                persistFlavours()
+                
+            }
+        }
+        // Builds menus
+        .commands {
+            MainMenuCommands()
+        }
+
         
         WindowGroup("Favourites") {
             FavouritesView(favouritesList: $favouritesList)
                 .frame(minWidth: 600, idealWidth: 700, minHeight: 500, idealHeight: 700)
         }
+        .handlesExternalEvents(matching: Set(arrayLiteral: "Favourites"))
         // For opening another window, see this post:
         // https://developer.apple.com/forums/thread/651592?answerId=680951022#680951022
-        .handlesExternalEvents(matching: Set(arrayLiteral: "Favourites"))
         
     }
 }
