@@ -62,6 +62,8 @@ struct MainMenuCommands: Commands {
                 Text(animationActiveTrigger ?? true ? "Resume Animation" : "Pause Animation")
             })
             .keyboardShortcut("A", modifiers: [.command])
+            
+            Divider()
         }
 
         // MARK: Help menu
