@@ -16,7 +16,7 @@ struct ShortcutAnimationView: View {
     var body: some View {
         AnimatedImage(name: animation, isAnimating: $isAnimating)
             .resizable()
-            .aspectRatio(1.777, contentMode: .fit)  // Ensures that image sizes correctly when playing
+            .aspectRatio(1.5428571429, contentMode: .fit)  // Ensures that image sizes correctly when playing
             .onTapGesture {
                 isAnimating.toggle()
             }

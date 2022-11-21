@@ -58,6 +58,7 @@ struct ContentView: View {
         .task {
             // Runs once when app opens
             loadDataFromStorage()
+            print("There are this many shortcuts: \(shortcutsList.count)")
         }
 
 
