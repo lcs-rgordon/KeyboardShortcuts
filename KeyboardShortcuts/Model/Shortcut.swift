@@ -16,10 +16,10 @@ struct Glyph: Identifiable {
 struct Shortcut: Identifiable, Hashable, Encodable, Decodable {
     
     // MARK: Stored properties
-    let id = UUID()
+    var id = UUID()
     let sequence: String
     let description: String
-    let animation: String = "Tabs.gif"
+    var animation: String = "Tabs.gif"
     
     // MARK: Computed properties
     

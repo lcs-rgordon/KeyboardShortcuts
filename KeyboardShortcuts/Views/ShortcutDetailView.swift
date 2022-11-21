@@ -12,6 +12,7 @@ struct ShortcutDetailView: View {
     let item: Shortcut?
     @Binding var favouritesList: [Shortcut]
     let onFavouritesView: Bool
+    @State private var isAnimating = true
     
     var body: some View {
         
@@ -54,13 +55,22 @@ struct ShortcutDetailView: View {
                         .padding(.horizontal)
                         
                         Spacer()
+                        
+                        Button(action: {
+                            isAnimating.toggle()
+                        }, label: {
+                            Text(isAnimating ? "Pause Animation" : "Resume Animation")
+                        })
+                        .padding(.horizontal)
+
                     }
 
                 }
                 
                 Spacer()
                 
-                ShortcutAnimationView(animation: item.animation)
+                ShortcutAnimationView(animation: item.animation,
+                                      isAnimating: $isAnimating)
                 
                 Spacer()
                 

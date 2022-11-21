@@ -10,9 +10,9 @@ import SDWebImageSwiftUI
 
 struct ShortcutAnimationView: View {
     
-    @State private var isAnimating = true
     let animation: String
-    
+    @Binding var isAnimating: Bool
+
     var body: some View {
         VStack {
             AnimatedImage(name: animation, isAnimating: $isAnimating)
@@ -28,6 +28,6 @@ struct ShortcutAnimationView: View {
 
 struct ShortcutAnimationView_Previews: PreviewProvider {
     static var previews: some View {
-        ShortcutAnimationView(animation: "Tabs.gif")
+        ShortcutAnimationView(animation: "Tabs.gif", isAnimating: .constant(true))
     }
 }
