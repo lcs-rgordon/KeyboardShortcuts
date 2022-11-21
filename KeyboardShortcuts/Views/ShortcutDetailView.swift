@@ -14,6 +14,9 @@ struct ShortcutDetailView: View {
     let onFavouritesView: Bool
     @State private var isAnimating = true
     
+    // Used to toggle whether animation is running or not
+    @State private var animationActiveTrigger = false
+    
     var body: some View {
         
         if let item = item {
@@ -75,6 +78,13 @@ struct ShortcutDetailView: View {
                 Spacer()
                 
             }
+            // Picks up the toggle of state from the menu command
+            .onChange(of: animationActiveTrigger) { _ in
+                isAnimating.toggle()
+            }
+            // Connects the trigger on this page to the menu command
+            .focusedSceneValue(\.animationActiveTriggerBinding, $animationActiveTrigger)
+
             
             
         } else {

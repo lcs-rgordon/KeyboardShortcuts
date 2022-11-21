@@ -27,6 +27,7 @@
 		818F65B5292AE19D00F8FED8 /* MainMenuCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F65B4292AE19D00F8FED8 /* MainMenuCommands.swift */; };
 		818F65B8292AE70500F8FED8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F65B7292AE70500F8FED8 /* Constants.swift */; };
 		818F65BA292AE71D00F8FED8 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F65B9292AE71D00F8FED8 /* Functions.swift */; };
+		818F65BC292AF9D100F8FED8 /* FocusedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F65BB292AF9D100F8FED8 /* FocusedValues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		818F65B4292AE19D00F8FED8 /* MainMenuCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCommands.swift; sourceTree = "<group>"; };
 		818F65B7292AE70500F8FED8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		818F65B9292AE71D00F8FED8 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		818F65BB292AF9D100F8FED8 /* FocusedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedValues.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				818F65B4292AE19D00F8FED8 /* MainMenuCommands.swift */,
+				818F65BB292AF9D100F8FED8 /* FocusedValues.swift */,
 			);
 			path = Commands;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				818F65BC292AF9D100F8FED8 /* FocusedValues.swift in Sources */,
 				818F659E292A712900F8FED8 /* ListItemView.swift in Sources */,
 				818F6599292A630E00F8FED8 /* ShortcutAnimationView.swift in Sources */,
 				818F65A2292A8D5E00F8FED8 /* ShortcutDetailView.swift in Sources */,
