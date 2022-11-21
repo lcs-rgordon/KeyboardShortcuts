@@ -29,6 +29,7 @@
 		818F65BA292AE71D00F8FED8 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F65B9292AE71D00F8FED8 /* Functions.swift */; };
 		818F65BC292AF9D100F8FED8 /* FocusedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818F65BB292AF9D100F8FED8 /* FocusedValues.swift */; };
 		818F65BE292B0CFD00F8FED8 /* Duplicating Files.gif in Resources */ = {isa = PBXBuildFile; fileRef = 818F65BD292B0CFD00F8FED8 /* Duplicating Files.gif */; };
+		818F65C0292B102800F8FED8 /* Ejecting a Volume.gif in Resources */ = {isa = PBXBuildFile; fileRef = 818F65BF292B102800F8FED8 /* Ejecting a Volume.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		818F65B9292AE71D00F8FED8 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		818F65BB292AF9D100F8FED8 /* FocusedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedValues.swift; sourceTree = "<group>"; };
 		818F65BD292B0CFD00F8FED8 /* Duplicating Files.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Duplicating Files.gif"; sourceTree = "<group>"; };
+		818F65BF292B102800F8FED8 /* Ejecting a Volume.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Ejecting a Volume.gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		818F6594292A615300F8FED8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				818F65BF292B102800F8FED8 /* Ejecting a Volume.gif */,
 				818F65BD292B0CFD00F8FED8 /* Duplicating Files.gif */,
 				818F6595292A617100F8FED8 /* Tabs.gif */,
 			);
@@ -246,6 +249,7 @@
 				818F6584292A5EF600F8FED8 /* Assets.xcassets in Resources */,
 				818F65AE292ACCA300F8FED8 /* Mission Control Light.pxd in Resources */,
 				818F65BE292B0CFD00F8FED8 /* Duplicating Files.gif in Resources */,
+				818F65C0292B102800F8FED8 /* Ejecting a Volume.gif in Resources */,
 				818F6596292A617100F8FED8 /* Tabs.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

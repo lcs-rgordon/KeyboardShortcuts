@@ -206,7 +206,7 @@ let shortcutsList = [
     
     ,
     
-    Shortcut(sequence: "Command-E", description: "Eject the selected disk or volume.")
+    Shortcut(sequence: "Command-E", description: "Eject the selected disk or volume.", animation: "Ejecting a Volume.gif")
     
     ,
     
