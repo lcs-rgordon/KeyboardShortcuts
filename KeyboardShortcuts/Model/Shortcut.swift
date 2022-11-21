@@ -19,7 +19,7 @@ struct Shortcut: Identifiable, Hashable, Encodable, Decodable {
     var id = UUID()
     let sequence: String
     let description: String
-    var animation: String = "Tabs.gif"
+    var animation: String = "nothere.gif"
     
     // MARK: Computed properties
     
@@ -210,15 +210,15 @@ let shortcutsList = [
     
     ,
     
-    Shortcut(sequence: "Command-F", description: "Start a Spotlight search in the Finder window.")
+    Shortcut(sequence: "Command-F", description: "Start a Spotlight search in the Finder window.", animation: "Starting a Spotlight Search.gif")
     
     ,
     
-    Shortcut(sequence: "Command-I", description: "Show the Get Info window for a selected file.")
+    Shortcut(sequence: "Command-I", description: "Show the Get Info window for a selected file.", animation: "Show the Get Info window.gif")
     
     ,
     
-    Shortcut(sequence: "Command-R", description: "When an alias is selected: show the original file for the selected alias.")
+    Shortcut(sequence: "Command-R", description: "When an alias is selected: show the original file for the selected alias.", animation: "Show Original File From Alias.gif")
     
     ,
     
