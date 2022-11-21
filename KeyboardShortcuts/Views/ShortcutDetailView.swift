@@ -14,8 +14,19 @@ struct ShortcutDetailView: View {
     let onFavouritesView: Bool
     @State private var isAnimating = true
     
-    // Used to toggle whether animation is running or not
-    @State private var animationActiveTrigger = false
+    var animationToggleButton: some View {
+
+        Button(action: {
+            isAnimating.toggle()
+        }, label: {
+            Text(isAnimating ? "Pause Animation" : "Resume Animation")
+        })
+        .padding(.horizontal)
+
+    }
+    
+    // Used to toggle whether animation is running or not from the menu
+//    @State private var animationActiveTrigger = false
     
     var body: some View {
         
@@ -41,6 +52,9 @@ struct ShortcutDetailView: View {
                         .padding(.horizontal)
                         
                         Spacer()
+                        
+                        animationToggleButton
+                        
                     }
                 } else {
                     HStack {
@@ -59,12 +73,7 @@ struct ShortcutDetailView: View {
                         
                         Spacer()
                         
-                        Button(action: {
-                            isAnimating.toggle()
-                        }, label: {
-                            Text(isAnimating ? "Pause Animation" : "Resume Animation")
-                        })
-                        .padding(.horizontal)
+                        animationToggleButton
 
                     }
 
@@ -79,11 +88,11 @@ struct ShortcutDetailView: View {
                 
             }
             // Picks up the toggle of state from the menu command
-            .onChange(of: animationActiveTrigger) { _ in
-                isAnimating.toggle()
-            }
+//            .onChange(of: animationActiveTrigger) { _ in
+//                isAnimating.toggle()
+//            }
             // Connects the trigger on this page to the menu command
-            .focusedSceneValue(\.animationActiveTriggerBinding, $animationActiveTrigger)
+//            .focusedSceneValue(\.animationActiveTriggerBinding, $animationActiveTrigger)
 
             
             

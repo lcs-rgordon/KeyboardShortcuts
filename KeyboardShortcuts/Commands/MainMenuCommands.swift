@@ -16,8 +16,7 @@ struct MainMenuCommands: Commands {
     @Environment(\.openURL) var openURL
 
     // In a given detail view, used to trigger whether animation is active or not
-    @FocusedBinding(\.animationActiveTriggerBinding) private var animationActiveTrigger: Bool?
-
+//    @FocusedBinding(\.animationActiveTriggerBinding) private var animationActiveTrigger: Bool?
     
     var body: some Commands {
         
@@ -56,14 +55,14 @@ struct MainMenuCommands: Commands {
 
             Divider()
             
-            Button(action: {
-                animationActiveTrigger?.toggle()
-            }, label: {
-                Text(animationActiveTrigger ?? true ? "Resume Animation" : "Pause Animation")
-            })
-            .keyboardShortcut("A", modifiers: [.command])
-            
-            Divider()
+//            Button(action: {
+//                animationActiveTrigger?.toggle()
+//            }, label: {
+//                Text(animationActiveTrigger ?? true ? "Resume Animation" : "Pause Animation")
+//            })
+//            .keyboardShortcut("A", modifiers: [.command])
+//
+//            Divider()
         }
 
         // MARK: Help menu
