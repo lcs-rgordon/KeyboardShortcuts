@@ -64,12 +64,6 @@ struct ShortcutDetailView: View {
                 
                 Spacer()
                 
-                Button(action: {
-                    OpenWindows.favouritesView.open()
-                }, label: {
-                    Text("Show Favourites")
-                })
-                .padding(.bottom, 20)
             }
             
             
