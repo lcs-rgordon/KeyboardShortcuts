@@ -12,22 +12,20 @@ struct ShortcutAnimationView: View {
     
     let animation: String
     @Binding var isAnimating: Bool
-
+    
     var body: some View {
-        VStack {
-            AnimatedImage(name: animation, isAnimating: $isAnimating)
-                .resizable()
-                .scaledToFit()
-                .onTapGesture {
-                    isAnimating.toggle()
-                }
-        }
-        .padding()
+        AnimatedImage(name: animation, isAnimating: $isAnimating)
+            .resizable()
+            .aspectRatio(1.777, contentMode: .fit)  // Ensures that image sizes correctly when playing
+            .onTapGesture {
+                isAnimating.toggle()
+            }
+            .padding()
     }
 }
 
 struct ShortcutAnimationView_Previews: PreviewProvider {
     static var previews: some View {
-        ShortcutAnimationView(animation: "Tabs.gif", isAnimating: .constant(true))
+        ShortcutAnimationView(animation: "Duplicating Files.gif", isAnimating: .constant(true))
     }
 }

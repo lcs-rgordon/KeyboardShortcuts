@@ -202,7 +202,7 @@ let symbolsLookup: [String: Glyph] = [
 
 let shortcutsList = [
     
-    Shortcut(sequence: "Command-D", description: "Duplicate the selected files.")
+    Shortcut(sequence: "Command-D", description: "Duplicate the selected files.", animation: "Duplicating Files.gif")
     
     ,
     

@@ -79,12 +79,8 @@ struct ShortcutDetailView: View {
 
                 }
                 
-                Spacer()
-                
                 ShortcutAnimationView(animation: item.animation,
                                       isAnimating: $isAnimating)
-                
-                Spacer()
                 
             }
             // Picks up the toggle of state from the menu command
