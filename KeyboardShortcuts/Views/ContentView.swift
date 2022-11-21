@@ -5,12 +5,13 @@
 //  Created by Russell Gordon on 2022-11-20.
 //
 
+import AppKit
 import SwiftUI
 import SDWebImageSwiftUI
 
 struct ContentView: View {
     
-    @State var selectedShortcut: Shortcut?
+    @State var selectedShortcut: Int?
     
     // What the user is searching for
     @State private var searchText = ""
@@ -35,16 +36,40 @@ struct ContentView: View {
                 
         NavigationView {
 
-            List(searchResults, id: \.self, selection: $selectedShortcut) { shortcut in
+            List(selection: $selectedShortcut) {
                 
-                NavigationLink(destination: {
-                    ShortcutDetailView(item: selectedShortcut,
-                                       favouritesList: $favouritesList,
-                                       onFavouritesView: false)
-                }, label: {
-                    ListItemView(item: shortcut)
-                })
+                ForEach(searchResults.indices, id: \.self) { index in
+                    
+                    NavigationLink(destination: {
+                        ShortcutDetailView(item: searchResults[index],
+                                           favouritesList: $favouritesList,
+                                           onFavouritesView: false)
+                    }, label: {
+                        ListItemView(item: searchResults[index]).tag(index)
+                    })
+                }
                 
+            }
+            // Support keyboard navigation in the list
+            // SEE: https://stackoverflow.com/a/73256905/5537362
+            .onAppear {
+                NSEvent.addLocalMonitorForEvents(matching: [.keyDown]) { nsevent in
+                    
+                    if selectedShortcut != nil {
+                        if nsevent.keyCode == 125 { // arrow down
+                            print("moving down")
+                            selectedShortcut = selectedShortcut! < searchResults.count ? selectedShortcut! + 1 : 0
+                        } else {
+                            print("moving up")
+                            if nsevent.keyCode == 126 { // arrow up
+                                selectedShortcut = selectedShortcut! > 1 ? selectedShortcut! - 1 : 0
+                            }
+                        }
+                    } else {
+                        selectedShortcut = 0
+                    }
+                    return nsevent
+                }
             }
             .background(Color.primary.colorInvert())
             .frame(minWidth: 300, idealWidth: 400, maxWidth: 500)
@@ -53,7 +78,7 @@ struct ContentView: View {
 
         }
         .onChange(of: selectedShortcut) { newSelection in
-            print(newSelection?.description ?? "Nothing selected")
+            print(searchResults[selectedShortcut ?? 0].description ?? "Nothing selected")
         }
         .task {
             // Runs once when app opens
